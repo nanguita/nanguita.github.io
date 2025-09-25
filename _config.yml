@@ -1,0 +1,110 @@
+title: "Your Name / Site Title"
+description: "Academic homepage, publications, talks, teaching, and blog."
+url: "" # e.g., https://username.github.io
+baseurl: "" # e.g., /repo-name if using project pages
+
+author:
+  name: "Your Name"
+  avatar: "/assets/img/profile.jpg"
+  bio: "Short bio goes here. Research interests, affiliations, and roles."
+  location: "City, Country"
+  email: "you@example.com"
+  links:
+    - label: GitHub
+      icon: fab fa-github
+      url: "https://github.com/yourusername"
+    - label: Google Scholar
+      icon: ai ai-google-scholar
+      url: "https://scholar.google.com/citations?user=XXXX"
+    - label: ORCID
+      icon: ai ai-orcid
+      url: "https://orcid.org/0000-0000-0000-0000"
+    - label: Twitter
+      icon: fab fa-x-twitter
+      url: "https://twitter.com/yourusername"
+
+permalink: "/:categories/:year/:month/:day/:title/"
+markdown: kramdown
+highlighter: rouge
+timezone: "UTC"
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+  publications:
+    output: true
+    permalink: /publications/:title/
+  talks:
+    output: true
+    permalink: /talks/:title/
+  teaching:
+    output: true
+    permalink: /teaching/:title/
+  portfolio:
+    output: true
+    permalink: /portfolio/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: publication
+  - scope:
+      path: ""
+      type: "talks"
+    values:
+      layout: talk
+  - scope:
+      path: ""
+      type: "teaching"
+    values:
+      layout: teaching
+  - scope:
+      path: ""
+      type: "portfolio"
+    values:
+      layout: project
+
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+include:
+  - _pages
+  - _publications
+  - _talks
+  - _teaching
+  - _portfolio
+
+exclude:
+  - README.md
+  - node_modules
+  - vendor
+  - scripts
+
+site_theme: default # options: default, air
+dark_mode: true
+mathjax: true
+mermaid: true
+plotly: true
+
+feed:
+  path: feed.xml
+
+

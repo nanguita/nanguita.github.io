@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  {% include head.html %}
+  <body>
+    <div class="container">
+      <header style="margin: 1rem 0 1.5rem 0;">
+        <a href="{{ '/' | relative_url }}" style="text-decoration:none; color:inherit;">
+          <h1 style="margin:0;">{{ site.title }}</h1>
+        </a>
+        <div class="meta">{{ site.description }}</div>
+      </header>
+      <main class="layout">
+        {% include sidebar.html %}
+        <section>
+          {{ content }}
+        </section>
+      </main>
+      <footer class="meta" style="margin:2rem 0;">
+        <span>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</span>
+      </footer>
+    </div>
+  </body>
+</html>
+
+

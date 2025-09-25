@@ -1,0 +1,38 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  {%- seo -%}
+  {% if site.site_theme == 'air' %}
+  <link rel="stylesheet" href="{{ '/assets/css/air.css' | relative_url }}">
+  {% else %}
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+  <link rel="alternate" type="application/atom+xml" title="Feed" href="{{ site.feed.path | default: 'feed.xml' | relative_url }}">
+
+  {% if site.mathjax %}
+  <script>
+    window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']] } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  {% endif %}
+
+  {% if site.mermaid %}
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+  {% endif %}
+
+  {% if site.plotly %}
+  <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+  {% endif %}
+
+  <script defer src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+</head>
+
+

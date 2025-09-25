@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article>
+  <h1>{{ page.title }}</h1>
+  <div class="meta">
+    {% if page.course %}{{ page.course }}{% endif %}
+    {% if page.term %} · {{ page.term }}{% endif %}
+    {% if page.role %} · {{ page.role }}{% endif %}
+  </div>
+  {{ content }}
+</article>
+
+

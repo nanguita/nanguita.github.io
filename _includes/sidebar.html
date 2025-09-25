@@ -1,0 +1,28 @@
+<aside class="sidebar">
+  <img class="avatar" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
+  <h2>{{ site.author.name }}</h2>
+  <p class="meta">{{ site.author.bio }}</p>
+  <div class="meta">{{ site.author.location }}</div>
+
+  <nav class="nav" aria-label="Main">
+    <ul>
+    {% for item in site.data.navigation.main %}
+      <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  </nav>
+
+  <div style="margin-top: .75rem; display:flex; gap:.5rem; flex-wrap:wrap;">
+    {% for link in site.author.links %}
+      <a href="{{ link.url }}" target="_blank" rel="noopener" title="{{ link.label }}">
+        <i class="{{ link.icon }}"></i>
+      </a>
+    {% endfor %}
+  </div>
+
+  <button class="theme-toggle" data-theme-toggle>
+    <i class="fa-solid fa-circle-half-stroke"></i> Toggle theme
+  </button>
+</aside>
+
+

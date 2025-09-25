@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<article>
+  <h1>{{ page.title }}</h1>
+  <div class="meta">
+    {% if page.authors %}{{ page.authors }} · {% endif %}
+    {% if page.venue %}{{ page.venue }}{% endif %}
+    {% if page.year %} · {{ page.year }}{% endif %}
+  </div>
+
+  {% if page.abstract %}
+  <details open>
+    <summary>Abstract</summary>
+    <p>{{ page.abstract }}</p>
+  </details>
+  {% endif %}
+
+  <p style="margin-top:.75rem;">
+    {% if page.pdf %}<a href="{{ page.pdf }}" target="_blank">PDF</a>{% endif %}
+    {% if page.code %} · <a href="{{ page.code }}" target="_blank">Code</a>{% endif %}
+    {% if page.doi %} · <a href="https://doi.org/{{ page.doi }}" target="_blank">DOI</a>{% endif %}
+  </p>
+
+  {{ content }}
+</article>
+
+
