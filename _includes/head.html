@@ -1,7 +1,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title | default: site.title }}</title>
+  <title>
+    {%- if page.permalink == '/' or page.url == '/' -%}
+      {{ site.title }}
+    {%- elsif page.title -%}
+      {{ site.title }} - {{ page.title }}
+    {%- else -%}
+      {{ site.title }}
+    {%- endif -%}
+  </title>
   {%- seo -%}
   {% if site.site_theme == 'air' %}
   <link rel="stylesheet" href="{{ '/assets/css/air.css' | relative_url }}">
