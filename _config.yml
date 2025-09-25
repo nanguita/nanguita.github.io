@@ -1,27 +1,27 @@
-title: "Your Name / Site Title"
-description: "Academic homepage, publications, talks, teaching, and blog."
+title: "Nicolas Anguita"
+description: "PhD student at the University of Cambridge (Computational and Biological Learning Lab)."
 url: "" # e.g., https://username.github.io
 baseurl: "" # e.g., /repo-name if using project pages
 
 author:
-  name: "Your Name"
+  name: "Nicolas Anguita"
   avatar: "/assets/img/profile.jpg"
-  bio: "Short bio goes here. Research interests, affiliations, and roles."
-  location: "City, Country"
-  email: "you@example.com"
+  bio: "PhD student at the University of Cambridge in the Computational and Biological Learning Lab, supervised by Flavia Mancini and Andrew Saxe (Gatsby Computational Neuroscience Unit). Previously MEng in Mathematics and Computer Science at Imperial College London, focusing on machine learning and statistical theory; master thesis on deep learning theory under Pedro Mediano, Clémentine Domine, and Andrew Saxe."
+  location: "Cambridge, United Kingdom"
+  email: ""
   links:
-    - label: GitHub
-      icon: fab fa-github
-      url: "https://github.com/yourusername"
     - label: Google Scholar
       icon: ai ai-google-scholar
-      url: "https://scholar.google.com/citations?user=XXXX"
-    - label: ORCID
-      icon: ai ai-orcid
-      url: "https://orcid.org/0000-0000-0000-0000"
-    - label: Twitter
-      icon: fab fa-x-twitter
-      url: "https://twitter.com/yourusername"
+      url: "https://scholar.google.com/citations?user=dRsfofAAAAAJ&hl=es"
+    # - label: GitHub
+    #   icon: fab fa-github
+    #   url: "https://github.com/yourusername"
+    # - label: ORCID
+    #   icon: ai ai-orcid
+    #   url: "https://orcid.org/0000-0000-0000-0000"
+    # - label: Twitter
+    #   icon: fab fa-x-twitter
+    #   url: "https://twitter.com/yourusername"
 
 permalink: "/:categories/:year/:month/:day/:title/"
 markdown: kramdown
