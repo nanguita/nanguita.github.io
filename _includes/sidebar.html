@@ -1,7 +1,9 @@
 <aside class="sidebar">
   <img class="avatar" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
   <h2>{{ site.author.name }}</h2>
-  <p class="meta">{{ site.author.bio }}</p>
+  {% if site.author.title %}
+  <div class="meta">{{ site.author.title }}</div>
+  {% endif %}
   <div class="meta">{{ site.author.location }}</div>
 
   <nav class="nav" aria-label="Main">
