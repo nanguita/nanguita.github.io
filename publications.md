@@ -6,6 +6,10 @@ permalink: /publications/
 
 <h2>Publications</h2>
 
+<p class="meta">
+  See full list on <a href="https://scholar.google.com/citations?user=dRsfofAAAAAJ&hl=es" target="_blank" rel="noopener">Google Scholar</a>.
+  </p>
+
 <ul>
 {% assign pubs = site.publications | sort: 'year' | reverse %}
 {% for pub in pubs %}
